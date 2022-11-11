@@ -37,7 +37,7 @@ async function getMessageEncoding() {
 async function encryptMessage(publicKey) {
 	let encoded = await getMessageEncoding();
 	_CIPHERTEXT = await window.crypto.subtle.encrypt({name: "RSA-OAEP"}, publicKey, encoded );
-	document.querySelector(".rsa-oaep ._CIPHERTEXT-value").textContent = `${new Uint8Array(_CIPHERTEXT, 0, _CIPHERTEXT.byteLength).slice(0,10)}...\n[${_CIPHERTEXT.byteLength} bytes total]`;
+	document.querySelector(".rsa-oaep .ciphertext-value").textContent = `${new Uint8Array(_CIPHERTEXT, 0, _CIPHERTEXT.byteLength).slice(0,10)}...\n[${_CIPHERTEXT.byteLength} bytes total]`;
 }
 
 /* Fetch the _CIPHERTEXT and decrypt it. Write the decrypted message into the "Decrypted" box. */
