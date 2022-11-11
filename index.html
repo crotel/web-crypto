@@ -1,0 +1,50 @@
+<html style="height: calc(100vh);"><head>
+<!--     <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(function(error) {
+                console.error(error);
+            });
+        }
+    </script> -->
+    <script>
+        const $ = (e) => {
+            return document.querySelector(e);
+        }
+        const rootElement = document.querySelector("html");
+        const viewPortH = rootElement.getBoundingClientRect().height;
+        const windowH = window.innerHeight;
+        const browserUiBarsH = viewPortH - windowH;
+        rootElement.style.height = `calc(100vh - ${browserUiBarsH}px)`;
+    </script> 
+    <!--<link rel='manifest' href='manifest.json'>-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> -->
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
+    <!--    <link rel="manifest" href="site.webmanifest">-->
+    <!-- <link rel="mask-icon" color="#595959" href="/safari-pinned-tab.svg"> -->
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="crotel">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>WEB-CRYPTO</title>
+    <!-- <link rel="preload" as="style" href='/font.css' type='text/css'>-->
+    <!-- <link rel="stylesheet" href="/font.css"> -->
+    <!--<link rel="preload" as="style" href="/style.css" type='text/css'>-->
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+</head>
+
+<body style="">
+<section class="" id="current" style="">
+    
+
+</section>
+
+
+<script src="main.js" await=""></script>
+
+
+</body><footer>GPL-3.0 license</footer></html>

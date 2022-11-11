@@ -1,0 +1,23 @@
+<!-- <section class="examples"> -->
+	<section class="encrypt-decrypt rsa-oaep">
+		<h2 class="encrypt-decrypt-heading">RSA-OAEP</h2>
+		<section class="encrypt-decrypt-controls">
+			<div class="message-control">
+				<label for="rsa-oaep-message">Enter a message to encrypt:</label>
+				<input type="text" id="rsa-oaep-message" name="message" size="25" value="The owl hoots at midnight">
+			</div>
+			<div class="ciphertext">Ciphertext:<span class="ciphertext-value"></span></div>
+			<div class="decrypted">Decrypted:<span class="decrypted-value"></span></div>
+			<input class="generateKey-button" type="button" value="generateKey">
+			<input class="encrypt-button" type="button" value="Encrypt">
+			<input class="decrypt-button" type="button" value="Decrypt">
+			<!-- <br> -->
+			<input class="publicKey-export" type="button" value="Export PublicKey">
+			<input class="privateKey-export" type="button" value="Export PrivateKey">
+			<br>
+			<pre class="exported-publicKey"></pre>
+			<br>
+			<pre class="exported-privateKey"></pre>
+		</section>
+	</section>
+	<script src='script.js'></script>
