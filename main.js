@@ -129,7 +129,7 @@ const jit = {
         <span class="description" style="">for web-crypto tesing</span>
         <div>
         <div id="frame"></div>
-        <p class="btn" for="current" href="/current/index.html">current dev</p>
+        <p class="btn" for="current" href="/current/index.html">example</p>
         <p class="btn" for="derive-bits" href="/derive-bits/index.html">derive-bits</p>
 	    <p class="btn" for="derive-key" href="/derive-key/index.html">derive-key</p>
 	    <p class="btn" for="encrypt-decrypt" href="/encrypt-decrypt/index.html">encrypt-decrypt</p>
@@ -138,7 +138,7 @@ const jit = {
 	    <p class="btn" for="sign-verify" href="/sign-verify/index.html">sign-verify</p>
 	    <p class="btn" for="unwrap-key" href="/unwrap-key/index.html">unwrap-key</p>
 	    <p class="btn" for="wrap-key" href="/wrap-key/index.html">wrap-key</p>
-	    <p class="btn" for="md5" href="/md5/index.html">md5</p>
+	    <p class="btn" for="md5" href="/md5/index.html">js-md5</p>
 	    <p class="btn" for="compatibility" href="/compatibility/index.html">compatibility</p>
 	    
     </div>
