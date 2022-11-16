@@ -30,7 +30,7 @@ async function exportPublicKey(key) {
 
 async function exportPrivateKey(key) {
 	// return await crypto.subtle.exportKey("jwt", key )
-	let exported = await crypto.subtle.exportKey("spki", key );
+	let exported = await crypto.subtle.exportKey("pkcs8", key );
 	const exportedAsString = await ab2str(exported);
 	const exportedAsBase64 = btoa(exportedAsString);
 	const pemExported = `-----BEGIN PRIVATE KEY-----\n${exportedAsBase64}\n-----END PRIVATE KEY-----`;
@@ -72,6 +72,7 @@ document.querySelector(".rsa-oaep .decrypt-button").onclick = async() => {
 	if(!_KEYPAIR) {alert("generateKey first of all.");return};
 	if(!_CIPHERTEXT) {alert("encrypt sth,. before decrypt it.");return};
 	let decryptedMessage = await decryptMessage(_KEYPAIR.privateKey);
+
 	document.querySelector(".rsa-oaep .decrypted-value").textContent = decryptedMessage;
 };
 
@@ -85,6 +86,7 @@ document.querySelector(".rsa-oaep .publicKey-export").onclick = async() => {
 document.querySelector(".rsa-oaep .privateKey-export").onclick = async() => {
 	if(!_KEYPAIR) {alert("generateKey first of all.");return};
 	let _exportedPrivateKey = await exportPrivateKey(_KEYPAIR.privateKey);
+	console.log(_exportedPrivateKey)
 	// document.querySelector(".exported-privateKey").textContent = JSON.stringify(_exportedPrivateKey, null, " ");
 	document.querySelector(".exported-privateKey").textContent = _exportedPrivateKey;
 };
