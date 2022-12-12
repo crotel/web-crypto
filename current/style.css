@@ -1,0 +1,5 @@
+	*{
+		-webkit-font-smoothing: antialiased;
+    -webkit-transition: all 0.3s cubic-bezier(0.8, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.8, 0, 0.2, 1);
+  }

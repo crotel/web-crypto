@@ -1,4 +1,5 @@
 <!-- <section class="examples"> -->
+	<link rel="stylesheet" href="style.css">
 	<section class="encrypt-decrypt rsa-oaep">
 		<h2 class="encrypt-decrypt-heading">RSA-OAEP</h2>
 		<section class="encrypt-decrypt-controls">
@@ -6,14 +7,20 @@
 				<label for="rsa-oaep-message">Enter a message to encrypt:</label>
 				<input type="text" id="rsa-oaep-message" name="message" size="25" value="The owl hoots at midnight">
 			</div>
-			<div class="ciphertext">Ciphertext:<span class="ciphertext-value"></span></div>
+			<div class="ciphertext">Ciphertext:<span class="ciphertext-value"></span><span class="ciphertext-full" style="display:none"></span></div>
 			<div class="decrypted">Decrypted:<span class="decrypted-value"></span></div>
-			<input class="generateKey-button" type="button" value="generateKey">
-			<input class="encrypt-button" type="button" value="Encrypt">
-			<input class="decrypt-button" type="button" value="Decrypt">
-			<!-- <br> -->
-			<input class="publicKey-export" type="button" value="Export PublicKey">
-			<input class="privateKey-export" type="button" value="Export PrivateKey">
+			<p />
+			<h4>PEM format</h4>
+			<input class="generateKey-button pem" type="button" value="GenerateKey" style="font-weight: bolder;padding: 7px 19px;"> <span style=" color: #acacac;"> --> </span>
+			<input class="encrypt-button pem" type="button" value="Encrypt" disabled style="padding: 7px 19px;"> <span style=" color: #acacac;"> --> </span>
+			<input class="decrypt-button pem" type="button" value="Decrypt" disabled style="padding: 7px 19px;">
+			<p />
+			<h4>JWK format</h4>
+			<input class="generateKey-button jwk" type="button" value="GenerateKey" style="font-weight: bolder;padding: 7px 19px;"> <span style=" color: #acacac;"> --> </span>
+			<input class="encrypt-button jwk" type="button" value="Encrypt" disabled style="padding: 7px 19px;"> <span style=" color: #acacac;"> --> </span>
+			<input class="decrypt-button jwk" type="button" value="Decrypt" disabled style="padding: 7px 19px;">
+			<!-- <input class="publicKey-export" type="button" value="Export PublicKey" disabled>
+			<input class="privateKey-export" type="button" value="Export PrivateKey" disabled> -->
 			<br>
 			<pre class="exported-publicKey" style="width: 100%; white-space: pre-wrap; word-break: break-word; height: fit-content; "></pre> 
 			<br>
